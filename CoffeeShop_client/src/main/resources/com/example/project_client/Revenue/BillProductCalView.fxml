@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.chart.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1366.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.project_client.view.controller.Revenue.BillProductCalViewController">
+    <children>
+        <HBox fx:id="returnHbox" prefHeight="26.0" prefWidth="1366.0" />
+        <HBox fx:id="inputHbox" alignment="CENTER_LEFT" prefHeight="89.0" prefWidth="1366.0" spacing="50.0">
+            <children>
+                <VBox prefHeight="89.0" prefWidth="240.0">
+                    <children>
+                        <Label fx:id="dateStartLabel" prefHeight="40.0" prefWidth="240.0" text="Ngày bắt đầu" />
+                        <DatePicker fx:id="datePickStart" focusTraversable="false" prefHeight="50.0" prefWidth="266.0" />
+                    </children>
+                </VBox>
+                <VBox prefHeight="89.0" prefWidth="240.0">
+                    <children>
+                        <Label fx:id="dateEndLabel" prefHeight="40.0" prefWidth="240.0" text="Ngày kết thúc" />
+                        <DatePicker fx:id="datePickEnd" focusTraversable="false" prefHeight="50.0" prefWidth="266.0" />
+                    </children>
+                </VBox>
+                <VBox prefHeight="89.0" prefWidth="240.0">
+                    <children>
+                        <Label fx:id="typeCbbLabel" prefHeight="40.0" prefWidth="240.0" text="Thống kê " />
+                        <ComboBox fx:id="typeCbb" prefHeight="50.0" prefWidth="247.0" />
+                    </children>
+                </VBox>
+                <VBox fx:id="parentTotalVbox" prefHeight="89.0" prefWidth="208.0" visible="false">
+                    <children>
+                        <Label fx:id="sumBillProLabel" prefHeight="41.0" prefWidth="266.0" text="Tổng doanh thu:" />
+                        <Label fx:id="totalBillProLabel" prefHeight="47.0" prefWidth="266.0" text="Label" />
+                    </children>
+                </VBox>
+            </children>
+            <padding>
+                <Insets left="80.0" />
+            </padding>
+        </HBox>
+        <AnchorPane prefHeight="200.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+            <children>
+                <LineChart fx:id="billProductLineChart" layoutX="77.0" layoutY="14.0" prefHeight="617.0" prefWidth="1213.0" visible="false">
+                    <xAxis>
+                        <CategoryAxis label="Ngày" side="BOTTOM" fx:id="xAxistBillProductLine" />
+                    </xAxis>
+                    <yAxis>
+                        <NumberAxis fx:id="yAxistBillProductLine" label="Doanh thu" side="LEFT" />
+                    </yAxis>
+                </LineChart>
+                <BarChart fx:id="billProductBarChart" layoutX="77.0" layoutY="14.0" prefHeight="617.0" prefWidth="1213.0" visible="false">
+                    <xAxis>
+                        <CategoryAxis label="Sản phẩm" side="BOTTOM" />
+                    </xAxis>
+                    <yAxis>
+                        <NumberAxis fx:id="yAxistBillProduct" label="Số lượng" side="LEFT" />
+                    </yAxis>
+                </BarChart>
+                <VBox fx:id="inforVbox" layoutX="187.0" layoutY="50.0" prefHeight="88.0" prefWidth="221.0" style="-fx-border-color: black; -fx-padding: 6; -fx-background-color: white;" visible="false">
+                    <children>
+                        <Label fx:id="dateInforLabel" prefHeight="44.0" prefWidth="253.0" text="Label" />
+                        <Label fx:id="revenueInforLabel" prefHeight="44.0" prefWidth="264.0" text="Label" />
+                    </children>
+                </VBox>
+                <Button fx:id="swapChartBtn" layoutX="77.0" layoutY="605.0" mnemonicParsing="false" onAction="#swapChart" text="Xem thống kê" visible="false" />
+            </children>
+        </AnchorPane>
+    </children>
+</VBox>

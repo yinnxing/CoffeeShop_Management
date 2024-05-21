@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <VBox spacing="10" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+            <HBox spacing="10">
+                <Button text="Save" />
+                <Button text="Delete" />
+                <Button text="Update" />
+            </HBox>
+            <TableView fx:id="tableView">
+                <columns>
+                    <TableColumn text="ID" fx:id="idColumn"/>
+                    <TableColumn text="Name" fx:id="nameColumn"/>
+                    <TableColumn text="Email" fx:id="emailColumn"/>
+                    <TableColumn text="Date" fx:id="dateColumn"/>
+                    <TableColumn text="Phone Number" fx:id="phoneNumberColumn"/>
+                </columns>
+            </TableView>
+        </VBox>
+    </children>
+</AnchorPane>

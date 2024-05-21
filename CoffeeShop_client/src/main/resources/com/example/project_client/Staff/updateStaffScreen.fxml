@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Rectangle2D?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<?import javafx.scene.layout.StackPane?>
+<StackPane prefWidth="1366" prefHeight="768" stylesheets="@style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.project_client.view.controller.Staff.UpdateStaffView">
+    <children>
+        <GridPane fx:id="formTable" hgap="20.0" maxWidth="-Infinity" prefHeight="400.0" prefWidth="1100.0" vgap="10.0">
+            <columnConstraints>
+                <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="241.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="80.0" minWidth="10.0" prefWidth="62.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="355.0" minWidth="10.0" prefWidth="339.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <children>
+                <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="30.0" GridPane.columnSpan="4" GridPane.rowIndex="5">
+                    <children>
+                        <Button mnemonicParsing="false" onAction="#clear" text="Clear">
+                            <cursor>
+                                <Cursor fx:constant="HAND" />
+                            </cursor>
+                            <graphic>
+                                <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                                    <viewport>
+                                        <Rectangle2D />
+                                    </viewport>
+                                    <image>
+                                        <Image url="@img/reload.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                        </Button>
+                        <Button  mnemonicParsing="false" onAction="#update"  text="Insert">
+                            <cursor>
+                                <Cursor fx:constant="HAND" />
+                            </cursor>
+                            <graphic>
+                                <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@img/save.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                        </Button>
+                        <Button  mnemonicParsing="false" onAction="#cancelUpdate" text="Cancel">
+                            <cursor>
+                                <Cursor fx:constant="HAND" />
+                            </cursor>
+                            <graphic>
+                                <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@img/cross.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                        </Button>
+                    </children>
+                    <GridPane.margin>
+                        <Insets top="10.0" />
+                    </GridPane.margin>
+                </HBox>
+                <Label text="ID" styleClass="labeladdview" />
+                <TextField fx:id="idField" alignment="TOP_LEFT" maxWidth="-Infinity" prefWidth="160.0" promptText="MaNhanVien" GridPane.columnIndex="1" GridPane.hgrow="NEVER" />
+                <Label text="Email" styleClass="labeladdview" GridPane.columnIndex="2" />
+                <TextField fx:id="emailField" alignment="TOP_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="31.0" prefWidth="250.0" promptText="Email" GridPane.columnIndex="3" GridPane.hgrow="NEVER" />
+                <TextField fx:id="nameField" alignment="TOP_LEFT" maxWidth="-Infinity" prefWidth="300.0" promptText="Name" GridPane.columnIndex="1" GridPane.hgrow="NEVER" GridPane.rowIndex="1" />
+                <TextField fx:id="phoneField" alignment="TOP_LEFT" maxWidth="-Infinity" prefWidth="300.0" promptText="Phone Number" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                <TextField fx:id="addressField" alignment="TOP_LEFT" maxWidth="-Infinity" prefWidth="300.0" promptText="Address" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                <DatePicker fx:id="birthDatePicker" maxHeight="-Infinity" prefHeight="31.0" prefWidth="300.0" promptText="dd-mm-yyyy" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                <Label text="Name" styleClass="labeladdview" GridPane.rowIndex="1" />
+                <Label text="Phone Number" styleClass="labeladdview" GridPane.rowIndex="2" />
+                <Label text="Address" styleClass="labeladdview" GridPane.rowIndex="3" />
+                <Label text="Date Of Birth" styleClass="labeladdview" GridPane.rowIndex="4" />
+                <Label text="Salary" styleClass="labeladdview" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                <TextField fx:id="salaryField" alignment="TOP_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="31.0" prefWidth="250.0" promptText="Salary" GridPane.columnIndex="3" GridPane.hgrow="NEVER" GridPane.rowIndex="1"/>
+                <TextField fx:id="roleField" alignment="TOP_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="31.0" prefWidth="250.0" promptText="Role" GridPane.columnIndex="3" GridPane.hgrow="NEVER" GridPane.rowIndex="2"/>
+                <Label text="Role" styleClass="labeladdview" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                <Label text="Gender" styleClass="labeladdview" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="10.0" GridPane.columnIndex="3" GridPane.rowIndex="3">
+                    <children>
+                        <RadioButton fx:id="male" mnemonicParsing="false" text="NAM">
+                            <cursor>
+                                <Cursor fx:constant="HAND" />
+                            </cursor>
+                            <toggleGroup>
+                                <ToggleGroup fx:id="genderToggleGroup" />
+                            </toggleGroup>
+                        </RadioButton>
+                        <RadioButton fx:id="female" mnemonicParsing="false" text="NU" toggleGroup="$genderToggleGroup">
+                            <cursor>
+                                <Cursor fx:constant="HAND" />
+                            </cursor>
+                        </RadioButton>
+                    </children>
+                    <GridPane.margin>
+                        <Insets />
+                    </GridPane.margin>
+                </HBox>
+            </children>
+            <padding>
+                <Insets top="10.0" />
+            </padding>
+        </GridPane>
+    </children>
+</StackPane>

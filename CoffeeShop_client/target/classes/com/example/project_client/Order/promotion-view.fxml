@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<SplitPane dividerPositions="0.5" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1366.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.project_client.view.controller.Order.PromotionView">
+    <VBox>
+        <padding>
+            <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+        </padding>
+        <HBox fx:id="topHBox" alignment="CENTER" spacing="10.0">
+            <Label text="Products:" />
+         <TextField fx:id="filter" promptText="Nhập tên sản phẩm" />
+            <Region HBox.hgrow="ALWAYS" />
+         <Button fx:id="addAll" mnemonicParsing="false" onAction="#addAll" text="Add all" />
+            <TextField fx:id="percent" prefHeight="36.0" prefWidth="46.0" promptText="0" text="10" />
+            <Label text="\%" />
+        </HBox>
+        <ScrollPane prefHeight="700.0" prefWidth="651.0">
+            <FlowPane fx:id="productsPane" prefWidth="650.0" />
+        </ScrollPane>
+    </VBox>
+    <VBox>
+        <TabPane side="RIGHT" tabClosingPolicy="UNAVAILABLE">
+            <Tab text="Products">
+                <ListView fx:id="listView" prefHeight="460.0" prefWidth="391.0" />
+            </Tab>
+            <Tab text="Thông tin">
+                <VBox alignment="CENTER">
+                    <padding>
+                        <Insets top="15.0" />
+                    </padding>
+                    <VBox fx:id="infor" alignment="TOP_RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="485.0" prefWidth="600.0">
+                        <padding>
+                            <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                        </padding>
+                        <GridPane vgap="10.0">
+                            <columnConstraints>
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            </columnConstraints>
+                            <rowConstraints>
+                                <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                <RowConstraints maxHeight="80.00001220703123" minHeight="10.0" prefHeight="72.00001220703123" vgrow="SOMETIMES" />
+                                <RowConstraints maxHeight="30.399993896484375" minHeight="0.0" prefHeight="24.79998779296875" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="9.600012207031256" vgrow="SOMETIMES" />
+                            </rowConstraints>
+                            <Label text="Name:" />
+                            <Label text="Information:" GridPane.rowIndex="1" />
+                            <Label text="Start time:" GridPane.rowIndex="2" />
+                            <Label text="End time:" GridPane.rowIndex="3" />
+                            <Label text="Condition:" GridPane.rowIndex="4" />
+                            <TextField fx:id="name" GridPane.columnIndex="1" />
+                            <TextArea fx:id="information" prefHeight="70.0" prefWidth="286.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                            <DatePicker fx:id="startTime" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                            <DatePicker fx:id="endTime" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                            <CheckBox fx:id="condition" mnemonicParsing="false" text="Áp dụng điều kiện" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                        </GridPane>
+                        <HBox alignment="TOP_CENTER" spacing="10.0">
+                            <VBox.margin>
+                                <Insets top="15.0" />
+                            </VBox.margin>
+                        </HBox>
+                    </VBox>
+                </VBox>
+            </Tab>
+        </TabPane>
+        <HBox fx:id="btnCont" prefHeight="66.0" prefWidth="646.0" spacing="10.0">
+         <Button fx:id="confirmation" mnemonicParsing="false" onAction="#confirmation" styleClass="success" text="Xác nhận" />
+            <Button mnemonicParsing="false" onAction="#cancel" styleClass="accent" text="Quay lại" />
+         <Region HBox.hgrow="ALWAYS" />
+         <Button fx:id="remove" mnemonicParsing="false" onAction="#remove" styleClass="danger" text="Xóa" />
+         <padding>
+            <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+         </padding>
+         <VBox.margin>
+            <Insets right="35.0" />
+         </VBox.margin>
+        </HBox>
+        <VBox fx:id="parent" alignment="TOP_CENTER">
+            <VBox fx:id="warningVBox">
+                <VBox.margin>
+                    <Insets left="15.0" />
+                </VBox.margin>
+                <Label text="Vui lòng kiểm tra lại thông tin:" textFill="RED" />
+                <Text fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" text="Các thông tin không được để trống" wrappingWidth="334.0137939453125" />
+                <Text fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" text="Trong cùng một thời điểm không được diễn ra hai CTKM" wrappingWidth="334.0137939453125" />
+                <Text fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" text="Thời gian kết thúc phải lớn hơn hoặc bằng thời gian bắt đầu" wrappingWidth="334.0137939453125" />
+                <Text fill="RED" layoutX="10.0" layoutY="102.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Danh sách sản phẩm giảm giá không được để trống" wrappingWidth="334.0137939453125" />
+            </VBox>
+        </VBox>
+      <padding>
+         <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+      </padding>
+    </VBox>
+</SplitPane>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="main_form" prefHeight="768.0" prefWidth="1366.0" style="-fx-background-color: eaded6;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.project_client.view.controller.Product.changeProductView">
+   <children>
+      <Button layoutX="352.0" layoutY="668.0" mnemonicParsing="false" onAction="#confirm" prefHeight="60.0" prefWidth="232.0" styleClass="loginButton" stylesheets="@../Customer/Stylesheet/DefaultStyle.css" text="confirm" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font></Button>
+      <Button layoutX="623.0" layoutY="664.0" mnemonicParsing="false" onAction="#cancel" prefHeight="63.0" prefWidth="240.0" styleClass="loginButton" stylesheets="@../Customer/Stylesheet/DefaultStyle.css" text="cancel" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font></Button>
+      <Label layoutX="355.0" layoutY="151.0" text="ID:">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font></Label>
+      <Label layoutX="354.0" layoutY="474.0" text="Image:">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font></Label>
+      <Label layoutX="354.0" layoutY="577.0" text="Available:">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font></Label>
+      <ChoiceBox fx:id="choiceBox" layoutX="542.0" layoutY="561.0" prefHeight="48.0" prefWidth="176.0" style="-fx-background-color: #ffffff;" />
+      <TextField fx:id="price" layoutX="541.0" layoutY="360.0">
+         <font>
+            <Font size="24.0" />
+         </font></TextField>
+      <Label layoutX="354.0" layoutY="368.0" text="Price:">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font></Label>
+      <TextField fx:id="name" layoutX="541.0" layoutY="245.0">
+         <font>
+            <Font size="24.0" />
+         </font></TextField>
+      <Label layoutX="354.0" layoutY="253.0" text="Name:">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font></Label>
+      <Label fx:id="id" layoutX="542.0" layoutY="151.0" text="ID" textFill="#ff7657">
+         <font>
+            <Font name="System Bold Italic" size="26.0" />
+         </font></Label>
+      <Label fx:id="nameAlert" layoutX="541.0" layoutY="214.0" text="Name" textFill="RED">
+         <font>
+            <Font name="System Italic" size="18.0" />
+         </font></Label>
+      <Label fx:id="priceAlert" layoutX="543.0" layoutY="325.0" text="Price" textFill="RED">
+         <font>
+            <Font name="System Italic" size="18.0" />
+         </font></Label>
+      <Label fx:id="imageAlert" layoutX="543.0" layoutY="436.0" text="Image" textFill="RED">
+         <font>
+            <Font name="System Italic" size="18.0" />
+         </font></Label>
+      <Button fx:id="image" layoutX="541.0" layoutY="470.0" mnemonicParsing="false" onAction="#chooseImage" text="Choose Image" textFill="#ff7657">
+         <font>
+            <Font size="22.0" />
+         </font></Button>
+      <Pane layoutX="1083.0" prefHeight="768.0" prefWidth="304.0" style="-fx-background-color: #94c3ab;" />
+      <Label layoutX="444.0" layoutY="47.0" prefHeight="57.0" prefWidth="372.0" text="Change product" textFill="#ff7657">
+         <font>
+            <Font name="System Bold" size="41.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

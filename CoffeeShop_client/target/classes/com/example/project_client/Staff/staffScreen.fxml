@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<ScrollPane prefHeight="768.0" prefWidth="1366.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.project_client.view.controller.Staff.StaffView">
+    <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="768.0" prefWidth="1366.0">
+            <children>
+                <Pane prefHeight="68.0" prefWidth="366.0" >
+                    <HBox layoutY="30" layoutX="340" spacing="50" alignment="CENTER">
+                        <Button  mnemonicParsing="false" onAction="#updateStaff" alignment="CENTER" text="Update Staff" />
+                        <Button  mnemonicParsing="false" onAction="#addStaff" alignment="CENTER"  text="Add Staff" />
+                        <Button  mnemonicParsing="false" onAction="#deleteStaff" alignment="CENTER" text="Delete Staff" />
+                        <Button  mnemonicParsing="false" onAction="#cancelStaff" alignment="CENTER" text="Cancel" />
+                    </HBox>
+                </Pane>
+                <Label fx:id="timepiece"  styleClass="timepiece" layoutX="340" layoutY="655" text="Tìm kiếm nhân viên"/>
+                <TextField fx:id="searchTextField" layoutX="530.0" layoutY="650.0" prefWidth="280" promptText="Search..." />
+                <ScrollPane layoutX="29.0" layoutY="100.0" prefHeight="500.0" prefWidth="1300.0">
+                    <content>
+                        <TableView fx:id="tableView" prefHeight="500.0" prefWidth="1300.0">
+                            <columns>
+                                <TableColumn fx:id="id" prefWidth="75.0"  text="ID" />
+                                <TableColumn fx:id="name" prefWidth="200.0" text="Name" />
+                                <TableColumn fx:id="gender" prefWidth="100.0" text="Gender" />
+                                <TableColumn fx:id="dob" prefWidth="100.0" text="Dob" />
+                                <TableColumn fx:id="phoneNumber" prefWidth="150.0" text="Phone Number" />
+                                <TableColumn fx:id="email" prefWidth="200.0" text="Email" />
+                                <TableColumn fx:id="address" prefWidth="225.0" text="Address" />
+                                <TableColumn fx:id="role" prefWidth="125.0" text="Role" />
+                                <TableColumn fx:id="salaryPerDay" prefWidth="125.0" text="Salary(VNĐ)" />
+                            </columns>
+                        </TableView>
+                    </content>
+                </ScrollPane>
+            </children>
+        </AnchorPane>
+    </content>
+</ScrollPane>

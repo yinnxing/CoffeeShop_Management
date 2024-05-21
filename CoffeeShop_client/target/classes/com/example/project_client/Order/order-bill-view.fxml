@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1366.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.project_client.view.controller.Order.OrderBillView">
+   <Label text="Hóa đơn">
+      <font>
+         <Font size="30.0" />
+      </font>
+   </Label>
+   <HBox>
+      <TableView fx:id="productsContainer" HBox.hgrow="ALWAYS">
+         <columns>
+            <TableColumn fx:id="name" prefWidth="298.4000179171562" text="Tên mặt hàng"/>
+            <TableColumn fx:id="image" prefWidth="250.39996337890625" text="Hình ảnh"/>
+            <TableColumn fx:id="price" prefWidth="196.79998779296875" text="Đơn giá"/>
+            <TableColumn fx:id="count" prefWidth="104.0" text="SL"/>
+            <TableColumn fx:id="totalPrice" maxWidth="200.0" minWidth="0.0" prefWidth="300.0" text="Thành tiền"/>
+         </columns>
+      </TableView>
+      <VBox alignment="TOP_CENTER" maxWidth="-Infinity" prefHeight="660.0" prefWidth="448.0" spacing="10.0">
+         <HBox>
+            <Label text="Buy date:"/>
+            <Region HBox.hgrow="ALWAYS"/>
+            <Label fx:id="buyDate" layoutX="10.0" layoutY="10.0" text="01/01/2024"/>
+         </HBox>
+         <HBox>
+            <Label text="Customer phone:"/>
+            <Region HBox.hgrow="ALWAYS"/>
+            <Label fx:id="customerPhone" layoutX="10.0" layoutY="10.0" text="không"/>
+         </HBox>
+         <HBox layoutX="25.0" layoutY="25.0">
+            <Label text="Billcode:"/>
+            <Region HBox.hgrow="ALWAYS"/>
+            <Label fx:id="billCode" layoutX="10.0" layoutY="10.0" text="08022003"/>
+         </HBox>
+         <HBox>
+            <Label text="Staff id:"/>
+            <Region HBox.hgrow="ALWAYS"/>
+            <Label fx:id="staffId" layoutX="10.0" layoutY="10.0" text="FXJC019530"/>
+         </HBox>
+         <HBox layoutX="25.0" layoutY="268.0">
+            <Label text="Tổng giá trị hóa đơn:"/>
+            <Region HBox.hgrow="ALWAYS"/>
+            <Label fx:id="original" text="99,000 VND"/>
+         </HBox>
+         <HBox layoutX="25.0" layoutY="168.0">
+            <Label text="Tổng khấu trừ:"/>
+            <Region HBox.hgrow="ALWAYS"/>
+            <Label fx:id="deduction" text="99,000 VND"/>
+         </HBox>
+         <HBox>
+            <Label text="Tổng tiền thanh toán:"/>
+            <Region HBox.hgrow="ALWAYS"/>
+            <Label fx:id="total" text="99,000 VND"/>
+         </HBox>
+         <HBox>
+            <Label fx:id="method" text="Khách trả (Tiền mặt):"/>
+            <Region HBox.hgrow="ALWAYS"/>
+            <Label fx:id="received" text="100,000 VND"/>
+         </HBox>
+         <HBox layoutX="25.0" layoutY="204.0">
+            <Label text="Hoàn trả"/>
+            <Region HBox.hgrow="ALWAYS"/>
+            <Label fx:id="change" text="1,000 VND"/>
+         </HBox>
+         <HBox fx:id="hBox" alignment="CENTER" prefHeight="40.0" prefWidth="380.0" spacing="10.0">
+            <Button mnemonicParsing="false" onAction="#done" text="OK"/>
+            <Button fx:id="createNewBill" layoutX="177.0" layoutY="12.0" mnemonicParsing="false"
+                    onAction="#createNewBill" text="Tạo hóa đơn mới"/>
+         </HBox>
+         <padding>
+            <Insets bottom="15.0" left="15.0" right="15.0" top="15.0"/>
+         </padding>
+      </VBox>
+   </HBox>
+   <padding>
+      <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+   </padding>
+</VBox>

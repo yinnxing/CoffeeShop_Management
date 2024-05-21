@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="637.0" prefWidth="608.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.project_client.view.controller.Customer.AddCustomerView">
+   <children>
+      <HBox alignment="CENTER" layoutX="-5.0" layoutY="-2.0" prefHeight="104.0" prefWidth="607.0" style="-fx-background-color: #94c3ab;" AnchorPane.bottomAnchor="498.0" AnchorPane.leftAnchor="-5.0" AnchorPane.rightAnchor="-2.0" AnchorPane.topAnchor="-2.0">
+         <children>
+
+            <Label prefHeight="66.0" prefWidth="322.0" text="Thông tin khách hàng" textFill="WHITE">
+               <font>
+                  <Font size="29.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <VBox alignment="TOP_CENTER" layoutX="52.0" layoutY="173.0" prefHeight="357.0" prefWidth="548.0" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="213.0">
+         <children>
+            <HBox alignment="TOP_CENTER" prefHeight="73.0" prefWidth="439.0">
+               <children>
+                  <Label prefHeight="44.0" prefWidth="215.0" text="Số điện thoại: ">
+                     <font>
+                        <Font size="26.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets right="20.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="phoneNumField" prefHeight="37.0" prefWidth="263.0" />
+               </children>
+               <padding>
+                  <Insets bottom="10.0" />
+               </padding>
+            </HBox>
+            <HBox alignment="TOP_CENTER" prefHeight="77.0" prefWidth="539.0">
+               <children>
+                  <Label prefHeight="31.0" prefWidth="216.0" text="Họ tên: ">
+                     <font>
+                        <Font size="26.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets right="20.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="nameField" prefHeight="40.0" prefWidth="261.0" />
+               </children>
+            </HBox>
+            <HBox alignment="TOP_CENTER" prefHeight="65.0" prefWidth="439.0">
+               <children>
+                  <Label prefHeight="31.0" prefWidth="237.0" text="Dob: ">
+                     <font>
+                        <Font size="26.0" />
+                     </font>
+                  </Label>
+                  <DatePicker fx:id="dob" prefHeight="38.0" prefWidth="262.0" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="102.0" prefWidth="560.0" />
+            <HBox alignment="CENTER" prefHeight="40.0" prefWidth="446.0">
+               <children>
+                  <Button fx:id="saveCustomerBtn" mnemonicParsing="false" onAction="#saveCustomer" prefHeight="40.0" prefWidth="202.0" styleClass="orderButton" stylesheets="@Stylesheet/DefaultStyle.css" text="Save">
+                     <HBox.margin>
+                        <Insets right="40.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="resetCustomerBtn" mnemonicParsing="false" onAction="#reset" prefHeight="40.0" prefWidth="216.0" styleClass="orderButton" stylesheets="@Stylesheet/DefaultStyle.css" text="Clear">
+                     <font>
+                        <Font size="18.0" />
+                     </font></Button>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

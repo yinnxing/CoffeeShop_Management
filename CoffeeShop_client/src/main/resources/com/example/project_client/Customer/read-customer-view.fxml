@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="584.0" prefWidth="599.0" stylesheets="@Stylesheet/DefaultStyle.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.project_client.view.controller.Customer.ReadCustomerView">
+    <children>
+        <HBox alignment="CENTER" layoutX="-1.0" layoutY="-1.0" prefHeight="89.0" prefWidth="605.0" style="-fx-background-color: #94c3ab;" AnchorPane.bottomAnchor="496.0" AnchorPane.leftAnchor="-1.0" AnchorPane.rightAnchor="-5.0" AnchorPane.topAnchor="-1.0">
+            <children>
+
+                <Label prefHeight="97.0" prefWidth="319.0" text="Thông tin khách hàng" textFill="WHITE">
+                    <font>
+                        <Font size="29.0" />
+                    </font>
+                </Label>
+            </children>
+        </HBox>
+        <VBox alignment="TOP_CENTER" layoutX="69.0" layoutY="177.0" prefHeight="227.0" prefWidth="519.0" AnchorPane.bottomAnchor="120.0" AnchorPane.leftAnchor="69.0" AnchorPane.rightAnchor="12.0" AnchorPane.topAnchor="177.0">
+            <children>
+                <HBox alignment="CENTER" prefHeight="73.0" prefWidth="439.0">
+                    <children>
+                        <Label prefHeight="39.0" prefWidth="221.0" style="-fx-background-color: #94c3ab;" text="Số điện thoại: ">
+                            <font>
+                                <Font size="26.0" />
+                            </font>
+                            <HBox.margin>
+                                <Insets right="20.0" />
+                            </HBox.margin>
+                        </Label>
+                  <Label fx:id="phoneNumField" prefHeight="17.0" prefWidth="308.0" text="phoneNumber">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+                    </children>
+                    <padding>
+                        <Insets bottom="10.0" />
+                    </padding>
+                </HBox>
+                <HBox alignment="CENTER" prefHeight="77.0" prefWidth="439.0">
+                    <children>
+                        <Label prefHeight="37.0" prefWidth="230.0" style="-fx-background-color: #94c3ab;" text="Họ tên: ">
+                            <font>
+                                <Font size="26.0" />
+                            </font>
+                            <HBox.margin>
+                                <Insets right="20.0" />
+                            </HBox.margin>
+                        </Label>
+                  <Label fx:id="nameField" prefHeight="17.0" prefWidth="311.0" text="name">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+                    </children>
+                </HBox>
+                <HBox alignment="CENTER" prefHeight="65.0" prefWidth="491.0">
+                    <children>
+                        <Label prefHeight="38.0" prefWidth="222.0" style="-fx-background-color: #94c3ab;" text="Dob: ">
+                            <font>
+                                <Font size="26.0" />
+                            </font>
+                     <HBox.margin>
+                        <Insets right="20.0" />
+                     </HBox.margin>
+                        </Label>
+                  <Label fx:id="dob" contentDisplay="CENTER" prefHeight="29.0" prefWidth="299.0" text="dob">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+                    </children>
+                </HBox>
+            <HBox alignment="CENTER" prefHeight="73.0" prefWidth="439.0">
+               <children>
+                  <Label prefHeight="38.0" prefWidth="229.0" style="-fx-background-color: #94c3ab;" text="Tổng tiền: ">
+                     <font>
+                        <Font size="26.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets right="20.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label fx:id="totalField" prefHeight="17.0" prefWidth="308.0" text="total">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+               </children>
+               <padding>
+                  <Insets bottom="10.0" />
+               </padding>
+            </HBox>
+            </children>
+        </VBox>
+        <HBox layoutX="77.0" layoutY="484.0" prefHeight="40.0" prefWidth="446.0" />
+    </children>
+
+</AnchorPane>

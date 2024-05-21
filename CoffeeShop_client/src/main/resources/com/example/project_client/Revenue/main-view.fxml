@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.*?>
+
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1366.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.project_client.view.controller.Revenue.MainViewController">
+   <children>
+      <HBox fx:id="returnHbox" prefHeight="20.0" prefWidth="1366.0" />
+      <HBox fx:id="salaryAndIngHbox" prefHeight="100.0" prefWidth="200.0"  />
+      <HBox fx:id="revenueAndProfitHbox" prefHeight="100.0" prefWidth="200.0" />
+   </children>
+</VBox>

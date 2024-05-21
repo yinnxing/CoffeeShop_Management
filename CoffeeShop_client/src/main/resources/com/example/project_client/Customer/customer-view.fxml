@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="690.0" prefWidth="1075.0" stylesheets="@Stylesheet/DefaultStyle.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.project_client.view.controller.Customer.CustomerView">
+    <children>
+        <VBox layoutX="574.0" layoutY="100.0" prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <HBox alignment="CENTER_LEFT" prefHeight="90.0" prefWidth="865.0" VBox.vgrow="NEVER">
+                    <children>
+                        <Label alignment="CENTER" text="Thông tin khách hàng" underline="true">
+                            <font>
+                                <Font name="Cambria Italic" size="38.0" />
+                            </font>
+                            <HBox.margin>
+                                <Insets left="20.0" />
+                            </HBox.margin>
+                        </Label>
+                  <VBox alignment="CENTER_RIGHT" prefHeight="90.0" prefWidth="629.0" />
+                    </children>
+                </HBox>
+                <HBox alignment="TOP_RIGHT" prefHeight="553.0" prefWidth="1102.0" VBox.vgrow="NEVER">
+                    <children>
+                        <VBox alignment="TOP_CENTER" prefHeight="503.0" prefWidth="167.0">
+                     <children>
+                        <Button fx:id="addCustomerBtn" mnemonicParsing="false" onAction="#addCustomer" prefHeight="42.0" prefWidth="125.0" styleClass="loginButton" stylesheets="@Stylesheet/DefaultStyle.css" text="Create">
+                           <font>
+                              <Font size="18.0" />
+                           </font></Button>
+                     </children>
+                     <HBox.margin>
+                        <Insets top="50.0" />
+                     </HBox.margin>
+                        </VBox>
+                        <VBox alignment="TOP_CENTER" fillWidth="false" prefHeight="553.0" prefWidth="888.0" HBox.hgrow="NEVER">
+                            <children>
+                        <HBox alignment="CENTER_LEFT" prefHeight="101.0" prefWidth="902.0">
+                           <children>
+                              <TextField fx:id="searchField" prefHeight="39.0" prefWidth="712.0" styleClass="passwordfield" stylesheets="@Stylesheet/DefaultStyle.css">
+                                 <HBox.margin>
+                                    <Insets right="20.0" />
+                                 </HBox.margin>
+                              </TextField>
+                              <Button fx:id="searchBtn" mnemonicParsing="false" onAction="#searchCustomer" prefHeight="41.0" prefWidth="134.0" styleClass="loginButton" stylesheets="@Stylesheet/DefaultStyle.css" text="SEARCH">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </HBox>
+                                <ScrollPane fitToWidth="true" prefHeight="521.0" prefWidth="871.0" styleClass="shadow">
+                                    <content>
+                                        <TableView fx:id="customerTable" onMousePressed="#HandleTableSelected" prefHeight="477.0" prefWidth="817.0" styleClass="table-row-cell">
+                                            <columns>
+                                                <TableColumn fx:id="col_ID" minWidth="30.0" prefWidth="70.0" styleClass="alignCenter" text="ID" />
+                                                <TableColumn fx:id="col_phoneNumber" prefWidth="180.0" styleClass="alignCenter" text="Số điện thoại" />
+                                                <TableColumn fx:id="col_name" minWidth="50.0" prefWidth="220.0" styleClass="alignCenter" text="Họ Tên" />
+                                                <TableColumn fx:id="col_dob" prefWidth="120.0" text="Dob" />
+                                    <TableColumn fx:id="col_total" prefWidth="120.0" text="Total" />
+                                    <TableColumn fx:id="col_read" prefWidth="50.0" text="Xem" />
+                                    <TableColumn fx:id="col_edit" prefWidth="50.0" text="Sửa" />
+                                    <TableColumn fx:id="col_delete" prefWidth="50.0" text="Xoá" />
+                                            </columns>
+                                        </TableView>
+                                    </content>
+                                    <VBox.margin>
+                                        <Insets right="20.0" top="10.0" />
+                                    </VBox.margin>
+                                </ScrollPane>
+                            </children>
+                        </VBox>
+                    </children>
+                </HBox>
+            </children>
+        </VBox>
+    </children>
+</AnchorPane>
